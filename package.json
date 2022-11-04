@@ -1,6 +1,6 @@
 {
   "name": "@codewizard-dt/axios-api-handler",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "",
   "scripts": {
     "rollup": "sh rollup.sh",

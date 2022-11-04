@@ -37,8 +37,8 @@ export const jsonResponse: AxiosResponseTransformer = (data, headers) => {
 /**
  * 
  * @param response the raw AxiosResponse which contains a `data` property
- * @returns Just the data, properly typed as T | {error, errors}
+ * @returns Just the data, properly typed as T & {error, errors}
  */
-export function responseHandler<T = unknown>({ data }: RawResponse<T>): T | ApiResponseError {
+export function responseHandler<T = unknown>({ data }: RawResponse<T>): T & ApiResponseError {
   return data
 }

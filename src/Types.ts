@@ -5,6 +5,6 @@ export interface ApiResponseError {
   errors?: { [key: string]: any }
 }
 
-export type RawResponse<T> = AxiosResponse<T | ApiResponseError>
+export type RawResponse<T> = AxiosResponse<T & ApiResponseError>
 
-export type ApiResponse<T> = T | ApiResponseError
+export type ApiResponse<T> = T & ApiResponseError
