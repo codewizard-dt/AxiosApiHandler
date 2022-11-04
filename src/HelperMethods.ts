@@ -40,5 +40,7 @@ export const jsonResponse: AxiosResponseTransformer = (data, headers) => {
  * @returns Just the data, properly typed as T & {error, errors}
  */
 export function responseHandler<T = unknown>({ data }: RawResponse<T>): T & ApiResponseError {
+  if (data.error) console.error(data.error)
+  if (data.errors) console.error(data.errors)
   return data
 }
