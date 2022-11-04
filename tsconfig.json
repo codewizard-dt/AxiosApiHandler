@@ -6,11 +6,12 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
+    "lib":["ESNext"],
 
     // Added
     "module": "ESNext",
     "declaration": true,
-    "declarationDir": "types",
+    "declarationDir": "src/types",
     "sourceMap": true,
     "outDir": "dist",
     "moduleResolution": "node",
