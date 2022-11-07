@@ -11,7 +11,7 @@ import { ApiResponseError, RawResponse } from "./Types"
 export const jsonRequest: AxiosRequestTransformer = (data, headers) => {
   if (typeof data !== 'string') {
     /**
-     * Parses the data and sets a header if data is not a string
+     * Stringifies the data and sets a header if data is not a string
      */
     data = JSON.stringify(data)
     headers.setContentType('application/json')
@@ -44,3 +44,4 @@ export function responseHandler<T = unknown>({ data }: RawResponse<T>): T & ApiR
   if (data.errors) console.error(data.errors)
   return data
 }
+

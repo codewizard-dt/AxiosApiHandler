@@ -1,6 +1,6 @@
 #!/bin/zsh
 
 sh rollup.sh
-node ./incrementVersion.cjs
+# node ./incrementVersion.cjs
 sh prepublishCommit.sh
-npm publish --access=public
+# npm publish --access=public

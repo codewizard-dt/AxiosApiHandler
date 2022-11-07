@@ -14,7 +14,8 @@ export class AxiosApi {
   private defaultConfig: AxiosRequestConfig = {
     responseType: 'json',
     transformRequest: jsonRequest,
-    transformResponse: jsonResponse
+    transformResponse: jsonResponse,
+    validateStatus: (status) => status < 500
   }
   private axios: Axios;
   constructor(config?: AxiosRequestConfig) {
